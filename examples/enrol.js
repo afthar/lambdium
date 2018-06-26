@@ -23,12 +23,6 @@ $browser.getTitle().then(function(title) {
     console.log("title is: " + title);
     // console.log('Finished running script!');
 });
-try {
-  $browser.wait($driver.until.titleIs('Welcome, UQCollege – Blackboard Learn'), 5000);
-}
-catch(err){
-
-}
 
 //_choose_course
 
@@ -49,6 +43,7 @@ $browser.wait($driver.until.elementLocated($driver.By.xpath('//*[@id="controlpan
 $browser.findElement($driver.By.xpath('//*[@id="controlpanel.users.and.groups_groupContents"]/li[3]/a')).click();
 
 //enroll
+console.log('Enrolling...');
 $browser.wait($driver.until.elementLocated($driver.By.css('#nav > li > a')), 5000);
 $browser.findElement($driver.By.css('#nav > li > a')).click();
 
@@ -59,23 +54,15 @@ $browser.findElement($driver.By.id('userName')).sendKeys('studenta');
 $browser.wait($driver.until.elementLocated($driver.By.name('bottom_Submit')), 5000);
 $browser.findElement($driver.By.name('bottom_Submit')).click();
     // driver.implicitly_wait(2)
-try {
-  $browser.wait($driver.until.elementLocated($driver.By.id('goodMsg1')), 5000).then(function(webElement) {
+console.log('Waiting for status...');
+$browser.wait($driver.until.elementLocated($driver.By.id('goodMsg1')), 5000).then(function(webElement) {
     console.log('Success');
   });
-}
-catch(err){
-  console.log('NO Success');
-}
 
-try {
-  $browser.wait($driver.until.elementLocated($driver.By.id('badMsg1')), 5000).then(function(webElement) {
+$browser.wait($driver.until.elementLocated($driver.By.id('badMsg1')), 5000).then(function(webElement) {
     console.log('Failure');
-  });
-}
-catch(err){
-  console.log('NO Failure');
-}
+});
+
     //     error = ''
     // except NoSuchElementException:
     //     pass
