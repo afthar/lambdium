@@ -11,15 +11,18 @@ $browser.get('https://staging-blackboard.elearning.uq.edu.au/webapps/login/?acti
 // login
 console.log('Loggin in...');
 console.log('enter username...');
+$browser.wait($driver.until.elementLocated($driver.By.name('user_id')), 10000);
+$browser.findElement($driver.By.name('user_id')).click();
 $browser.findElement($driver.By.name('user_id')).sendKeys('uqc_admin');
 console.log('enter password...');
+$browser.findElement($driver.By.name('password')).click;
 $browser.findElement($driver.By.name('password')).sendKeys('NH8#UGcbUQ@CamLA');
 console.log('Click login...');
 $browser.findElement($driver.By.name('login')).click();
 // $browser.wait($driver.until.titleIs('Welcome, UQCollege – Blackboard Learn'), 10000);
 $browser.getTitle().then(function(title) {
     console.log("title is: " + title);
-    console.log('Finished running script!');
+    // console.log('Finished running script!');
 });
 //
 // //_choose_course
