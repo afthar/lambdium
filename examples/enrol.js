@@ -49,9 +49,15 @@ $browser.wait($driver.until.elementLocated($driver.By.xpath('//*[@id="controlpan
 $browser.findElement($driver.By.xpath('//*[@id="controlpanel.users.and.groups_groupContents"]/li[3]/a')).click();
 
 //enroll
-// $browser.findElement($driver.By.css('#nav > li > a')).click();
-// $browser.findElement($driver.By.id('userName')).sendKeys('100000009');
-// $browser.findElement($driver.By.name('bottom_Submit')).click();
+$browser.wait($driver.until.elementLocated($driver.By.css('#nav > li > a')), 5000);
+$browser.findElement($driver.By.css('#nav > li > a')).click();
+
+$browser.wait($driver.until.elementLocated($driver.By.id('userName')), 5000);
+$browser.findElement($driver.By.id('userName')).click();
+$browser.findElement($driver.By.id('userName')).sendKeys('studenta');
+
+$browser.wait($driver.until.elementLocated($driver.By.name('bottom_Submit')), 5000);
+$browser.findElement($driver.By.name('bottom_Submit')).click();
     // driver.implicitly_wait(2)
     // try:
     //     status = driver.find_element_by_id('goodMsg1').text.split(':', 1)[0]
