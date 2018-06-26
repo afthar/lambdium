@@ -32,7 +32,7 @@ catch(err){
 
 //_choose_course
 
-
+console.log('Choosing course...');
 $browser.wait($driver.until.elementLocated($driver.By.partialLinkText('AUTOMATION_TESTING')), 5000);
 $browser.findElement($driver.By.partialLinkText('AUTOMATION_TESTING')).click();
 
@@ -40,10 +40,12 @@ $browser.findElement($driver.By.partialLinkText('AUTOMATION_TESTING')).click();
  //_navigate
 
 // $browser.findElement($driver.By.id('menuPuller')).click();
+console.log('Click users and groups...');
 $browser.wait($driver.until.elementLocated($driver.By.id('controlpanel.users.and.groups_groupExpanderLink')), 5000);
-$browser.findElement($driver.By.xpath('//*[@id="controlpanel.users.and.groups_groupContents"]/li[3]/a')).click();
+$browser.findElement($driver.By.id('controlpanel.users.and.groups_groupExpanderLink')).click();
 
-$browser.wait($driver.until.elementLocated($driver.By.id('controlpanel.users.and.groups_groupExpanderLink')), 5000);
+console.log('Click users...');
+$browser.wait($driver.until.elementLocated($driver.By.xpath('//*[@id="controlpanel.users.and.groups_groupContents"]/li[3]/a')), 5000);
 $browser.findElement($driver.By.xpath('//*[@id="controlpanel.users.and.groups_groupContents"]/li[3]/a')).click();
 
 //enroll
