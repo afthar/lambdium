@@ -55,9 +55,9 @@ $browser.wait($driver.until.elementLocated($driver.By.name('bottom_Submit')), 50
 $browser.findElement($driver.By.name('bottom_Submit')).click();
     // driver.implicitly_wait(2)
 console.log('Waiting for status...');
-$browser.wait($driver.until.elementLocated($driver.By.id('goodMsg1')), 5000).then(function(webElement) {
-    console.log('Success');
-  });
+// $browser.wait($driver.until.elementLocated($driver.By.id('goodMsg1')), 5000).then(function(webElement) {
+//     console.log('Success');
+//   });
 
 $browser.wait($driver.until.elementLocated($driver.By.id('badMsg1')), 5000).then(function(webElement) {
     console.log('Failure');
