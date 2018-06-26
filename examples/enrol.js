@@ -19,7 +19,7 @@ $browser.findElement($driver.By.name('password')).click;
 $browser.findElement($driver.By.name('password')).sendKeys('NH8#UGcbUQ@CamLA');
 console.log('Click login...');
 $browser.findElement($driver.By.name('login')).click();
-// $browser.wait($driver.until.titleIs('Welcome, UQCollege – Blackboard Learn'), 10000);
+$browser.wait($driver.until.titleIs('Welcome, UQCollege – Blackboard Learn'), 10000);
 $browser.getTitle().then(function(title) {
     console.log("title is: " + title);
     // console.log('Finished running script!');
@@ -27,8 +27,8 @@ $browser.getTitle().then(function(title) {
 //
 // //_choose_course
 //
-$browser.wait($driver.until.elementLocated($driver.By.partialLinkText('AUTOMATION_TESTING')), 10000);
 
+$browser.wait($driver.until.elementLocated($driver.By.partialLinkText('AUTOMATION_TESTING')), 10000);
 $browser.findElement($driver.By.partialLinkText('AUTOMATION_TESTING')).click();
 //
 //
