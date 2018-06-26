@@ -18,12 +18,16 @@ console.log('enter password...');
 $browser.findElement($driver.By.name('password')).click;
 $browser.findElement($driver.By.name('password')).sendKeys('NH8#UGcbUQ@CamLA');
 console.log('Click login...');
-$browser.findElement($driver.By.name('login')).click();
+$browser.findElement($driver.By.id('entry-login')).click();
+$browser.getTitle().then(function(title) {
+    console.log("title is: " + title);
+    // console.log('Finished running script!');
+});
 try {
   $browser.wait($driver.until.titleIs('Welcome, UQCollege – Blackboard Learn'), 10000);
 }
 catch(err){
-  
+
 }
 $browser.getTitle().then(function(title) {
     console.log("title is: " + title);
