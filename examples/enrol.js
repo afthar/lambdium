@@ -7,8 +7,10 @@
 
 console.log('About to visit blackboard...');
 $browser.get('https://staging-blackboard.elearning.uq.edu.au/webapps/login/?action=default_login');
-$browser.findElement($driver.By.name('btnK')).click();
-$browser.wait($driver.until.titleIs('Blackboard Learn'), 1000);
+$browser.findElement($driver.By.name('user_id')).sendKeys('uqc_admin');
+$browser.findElement($driver.By.name('password')).sendKeys('NH8#UGcbUQ@CamLA');
+$browser.findElement($driver.By.name('login')).click();
+$browser.wait($driver.until.titleIs('Blackboard Learn'), 5000);
 $browser.getTitle().then(function(title) {
     console.log("title is: " + title);
     console.log('Finished running script!');
