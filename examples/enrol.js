@@ -7,11 +7,51 @@
 
 console.log('About to visit blackboard...');
 $browser.get('https://staging-blackboard.elearning.uq.edu.au/webapps/login/?action=default_login');
+
+// login
 $browser.findElement($driver.By.name('user_id')).sendKeys('uqc_admin');
 $browser.findElement($driver.By.name('password')).sendKeys('NH8#UGcbUQ@CamLA');
 $browser.findElement($driver.By.name('login')).click();
 $browser.wait($driver.until.titleIs('Blackboard Learn'), 5000);
 $browser.getTitle().then(function(title) {
     console.log("title is: " + title);
-    console.log('Finished running script!');
+
 });
+
+//_choose_course
+
+$browser.findElement($driver.By.partialLinkText('AUTOMATION_TESTING').click()
+
+
+//_navigate
+$browser.findElement($driver.By.id('controlpanel.users.and.groups_groupExpanderLink').click()
+if ($('#element').visible(true)) {
+    // The element is visible, do something
+} else {
+    $browser.findElement($driver.By.id('menuPuller').click()
+}
+
+$browser.findElement($driver.By.id('controlpanel.users.and.groups_groupExpanderLink').click()
+
+$browser.findElement($driver.By.xpath(framework_config.USERS_LINK).click()
+//enroll
+$browser.findElement($driver.By.css('#nav > li > a').click()
+$browser.findElement($driver.By.id('userName').send_keys(uqc_student_id)
+$browser.findElement($driver.By.name('bottom_Submit').click()
+    // driver.implicitly_wait(2)
+    // try:
+    //     status = driver.find_element_by_id('goodMsg1').text.split(':', 1)[0]
+    //     error = ''
+    // except NoSuchElementException:
+    //     pass
+    //
+    // try:
+    //     error = driver.find_element_by_id('badMsg1').text.split(':', 1)[0]
+    // except NoSuchElementException:
+    //     pass
+    //
+    //
+    // if error == framework_config.ALREADY_ENROLLED:
+    //     status = 'NA'
+
+console.log('Finished running script!');
