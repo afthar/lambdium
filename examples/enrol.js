@@ -20,18 +20,18 @@ $browser.getTitle().then(function(title) {
 
 //_choose_course
 
-$browser.findElement($driver.By.partialLinkText('AUTOMATION_TESTING')).click()
+$browser.findElement($driver.By.partialLinkText('AUTOMATION_TESTING')).click();
 
 
 //_navigate
-$browser.findElement($driver.By.id('controlpanel.users.and.groups_groupExpanderLink')).click()
-$browser.findElement($driver.By.id('menuPuller')).click()
+$browser.findElement($driver.By.id('controlpanel.users.and.groups_groupExpanderLink')).click();
+$browser.findElement($driver.By.id('menuPuller')).click();
 
-$browser.findElement($driver.By.xpath('//*[@id="controlpanel.users.and.groups_groupContents"]/li[3]/a')).click()
+$browser.findElement($driver.By.xpath('//*[@id="controlpanel.users.and.groups_groupContents"]/li[3]/a')).click();
 //enroll
-$browser.findElement($driver.By.css('#nav > li > a')).click()
-$browser.findElement($driver.By.id('userName')).send_keys('100000009')
-$browser.findElement($driver.By.name('bottom_Submit')).click()
+$browser.findElement($driver.By.css('#nav > li > a')).click();
+$browser.findElement($driver.By.id('userName')).send_keys('100000009');
+$browser.findElement($driver.By.name('bottom_Submit')).click();
     // driver.implicitly_wait(2)
     // try:
     //     status = driver.find_element_by_id('goodMsg1').text.split(':', 1)[0]
