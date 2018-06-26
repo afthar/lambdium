@@ -12,7 +12,7 @@ $browser.get('https://staging-blackboard.elearning.uq.edu.au/webapps/login/?acti
 $browser.findElement($driver.By.name('user_id')).sendKeys('uqc_admin');
 $browser.findElement($driver.By.name('password')).sendKeys('NH8#UGcbUQ@CamLA');
 $browser.findElement($driver.By.name('login')).click();
-$browser.wait($driver.until.titleIs('Welcome, UQCollege – Blackboard Learn'), 5000);
+$browser.wait($driver.until.titleIs('Welcome, UQCollege – Blackboard Learn'), 10000);
 $browser.getTitle().then(function(title) {
     console.log("title is: " + title);
     console.log('Finished running script!');
