@@ -39,9 +39,11 @@ $browser.findElement($driver.By.partialLinkText('AUTOMATION_TESTING')).click();
 
  //_navigate
 
-$browser.findElement($driver.By.id('controlpanel.users.and.groups_groupExpanderLink')).click();
 // $browser.findElement($driver.By.id('menuPuller')).click();
+$browser.wait($driver.until.elementLocated($driver.By.id('controlpanel.users.and.groups_groupExpanderLink')), 5000);
+$browser.findElement($driver.By.xpath('//*[@id="controlpanel.users.and.groups_groupContents"]/li[3]/a')).click();
 
+$browser.wait($driver.until.elementLocated($driver.By.id('controlpanel.users.and.groups_groupExpanderLink')), 5000);
 $browser.findElement($driver.By.xpath('//*[@id="controlpanel.users.and.groups_groupContents"]/li[3]/a')).click();
 
 //enroll
