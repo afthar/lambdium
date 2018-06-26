@@ -15,12 +15,12 @@ $browser.findElement($driver.By.name('login')).click();
 $browser.wait($driver.until.titleIs('Blackboard Learn'), 5000);
 $browser.getTitle().then(function(title) {
     console.log("title is: " + title);
-
+    console.log('Finished running script!');
 });
 
 //_choose_course
 
-$browser.findElement($driver.By.partialLinkText('AUTOMATION_TESTING').click()
+$browser.findElement($driver.By.partialLinkText('AUTOMATION_TESTING')).click()
 
 
 //_navigate
@@ -53,5 +53,3 @@ $browser.findElement($driver.By.name('bottom_Submit').click()
     //
     // if error == framework_config.ALREADY_ENROLLED:
     //     status = 'NA'
-
-console.log('Finished running script!');
