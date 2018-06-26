@@ -18,8 +18,10 @@ console.log('Click login...');
 $browser.findElement($driver.By.name('login')).click();
 function sleep(miliseconds) {
    var currentTime = new Date().getTime();
+
    while (currentTime + miliseconds >= new Date().getTime()) {
    }
+}
 // $browser.wait($driver.until.titleIs('Welcome, UQCollege – Blackboard Learn'), 10000);
 $browser.getTitle().then(function(title) {
     console.log("title is: " + title);
