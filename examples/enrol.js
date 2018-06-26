@@ -38,8 +38,9 @@ $browser.findElement($driver.By.partialLinkText('AUTOMATION_TESTING')).click();
 
 
  //_navigate
+
 $browser.findElement($driver.By.id('controlpanel.users.and.groups_groupExpanderLink')).click();
-$browser.findElement($driver.By.id('menuPuller')).click();
+// $browser.findElement($driver.By.id('menuPuller')).click();
 
 $browser.findElement($driver.By.xpath('//*[@id="controlpanel.users.and.groups_groupContents"]/li[3]/a')).click();
 
