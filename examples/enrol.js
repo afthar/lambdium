@@ -20,7 +20,7 @@ $browser.findElement($driver.By.name('login')).click();
 $browser.getTitle().then(function(title) {
     console.log("title is: " + title);
     console.log('Finished running script!');
-// });
+});
 //
 // //_choose_course
 //
