@@ -30,7 +30,7 @@ $browser.findElement($driver.By.id('menuPuller')).click();
 $browser.findElement($driver.By.xpath('//*[@id="controlpanel.users.and.groups_groupContents"]/li[3]/a')).click();
 //enroll
 $browser.findElement($driver.By.css('#nav > li > a')).click();
-$browser.findElement($driver.By.id('userName')).send_keys('100000009');
+$browser.findElement($driver.By.id('userName')).sendKeys('100000009');
 $browser.findElement($driver.By.name('bottom_Submit')).click();
     // driver.implicitly_wait(2)
     // try:
