@@ -24,20 +24,20 @@ $browser.findElement($driver.By.partialLinkText('AUTOMATION_TESTING')).click()
 
 
 //_navigate
-$browser.findElement($driver.By.id('controlpanel.users.and.groups_groupExpanderLink').click()
+$browser.findElement($driver.By.id('controlpanel.users.and.groups_groupExpanderLink')).click()
 if ($('#element').visible(true)) {
     // The element is visible, do something
 } else {
-    $browser.findElement($driver.By.id('menuPuller').click()
+    $browser.findElement($driver.By.id('menuPuller')).click()
 }
 
-$browser.findElement($driver.By.id('controlpanel.users.and.groups_groupExpanderLink').click()
+$browser.findElement($driver.By.id('controlpanel.users.and.groups_groupExpanderLink')).click()
 
-$browser.findElement($driver.By.xpath(framework_config.USERS_LINK).click()
+$browser.findElement($driver.By.xpath(framework_config.USERS_LINK)).click()
 //enroll
-$browser.findElement($driver.By.css('#nav > li > a').click()
-$browser.findElement($driver.By.id('userName').send_keys(uqc_student_id)
-$browser.findElement($driver.By.name('bottom_Submit').click()
+$browser.findElement($driver.By.css('#nav > li > a')).click()
+$browser.findElement($driver.By.id('userName')).send_keys('100000009')
+$browser.findElement($driver.By.name('bottom_Submit')).click()
     // driver.implicitly_wait(2)
     // try:
     //     status = driver.find_element_by_id('goodMsg1').text.split(':', 1)[0]
