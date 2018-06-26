@@ -4,22 +4,22 @@
 // $browser = webdriver session
 // $driver = driver libraries
 // console.log will output to AWS Lambda logs (via Cloudwatch)
-console.log('Reading variables...');
-
-var uqc_student_id   = process.env.UQC_STUDENT_ID;
-console.log("Student id is: " + uqc_student_id);
 
 console.log('About to visit blackboard...');
 $browser.get('https://staging-blackboard.elearning.uq.edu.au/webapps/login/?action=default_login');
 
 // login
+console.log('Loggin in...');
+console.log('enter username...');
 $browser.findElement($driver.By.name('user_id')).sendKeys('uqc_admin');
+console.log('enter password...');
 $browser.findElement($driver.By.name('password')).sendKeys('NH8#UGcbUQ@CamLA');
+console.log('Click login...');
 $browser.findElement($driver.By.name('login')).click();
 // $browser.wait($driver.until.titleIs('Welcome, UQCollege – Blackboard Learn'), 10000);
-// $browser.getTitle().then(function(title) {
-//     console.log("title is: " + title);
-//     console.log('Finished running script!');
+$browser.getTitle().then(function(title) {
+    console.log("title is: " + title);
+    console.log('Finished running script!');
 // });
 //
 // //_choose_course
