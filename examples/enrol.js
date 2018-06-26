@@ -11,7 +11,7 @@ $browser.get('https://staging-blackboard.elearning.uq.edu.au/webapps/login/?acti
 // login
 console.log('Loggin in...');
 console.log('enter username...');
-$browser.wait($driver.until.elementLocated($driver.By.name('user_id')), 10000);
+$browser.wait($driver.until.elementLocated($driver.By.name('user_id')), 5000);
 $browser.findElement($driver.By.name('user_id')).click();
 $browser.findElement($driver.By.name('user_id')).sendKeys('uqc_admin');
 console.log('enter password...');
@@ -24,29 +24,26 @@ $browser.getTitle().then(function(title) {
     // console.log('Finished running script!');
 });
 try {
-  $browser.wait($driver.until.titleIs('Welcome, UQCollege – Blackboard Learn'), 10000);
+  $browser.wait($driver.until.titleIs('Welcome, UQCollege – Blackboard Learn'), 5000);
 }
 catch(err){
 
 }
-$browser.getTitle().then(function(title) {
-    console.log("title is: " + title);
-    // console.log('Finished running script!');
-});
-//
-// //_choose_course
-//
 
-$browser.wait($driver.until.elementLocated($driver.By.partialLinkText('AUTOMATION_TESTING')), 10000);
+//_choose_course
+
+
+$browser.wait($driver.until.elementLocated($driver.By.partialLinkText('AUTOMATION_TESTING')), 5000);
 $browser.findElement($driver.By.partialLinkText('AUTOMATION_TESTING')).click();
-//
-//
-// //_navigate
-// $browser.findElement($driver.By.id('controlpanel.users.and.groups_groupExpanderLink')).click();
-// $browser.findElement($driver.By.id('menuPuller')).click();
-//
-// $browser.findElement($driver.By.xpath('//*[@id="controlpanel.users.and.groups_groupContents"]/li[3]/a')).click();
-// //enroll
+
+
+ //_navigate
+$browser.findElement($driver.By.id('controlpanel.users.and.groups_groupExpanderLink')).click();
+$browser.findElement($driver.By.id('menuPuller')).click();
+
+$browser.findElement($driver.By.xpath('//*[@id="controlpanel.users.and.groups_groupContents"]/li[3]/a')).click();
+
+//enroll
 // $browser.findElement($driver.By.css('#nav > li > a')).click();
 // $browser.findElement($driver.By.id('userName')).sendKeys('100000009');
 // $browser.findElement($driver.By.name('bottom_Submit')).click();
