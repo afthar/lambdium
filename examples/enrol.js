@@ -16,7 +16,7 @@ console.log('enter password...');
 $browser.findElement($driver.By.name('password')).sendKeys('NH8#UGcbUQ@CamLA');
 console.log('Click login...');
 $browser.findElement($driver.By.name('login')).click();
-function sleep(miliseconds) {
+function sleep(5000) {
    var currentTime = new Date().getTime();
 
    while (currentTime + miliseconds >= new Date().getTime()) {
