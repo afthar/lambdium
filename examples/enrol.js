@@ -27,10 +27,7 @@ $browser.findElement($driver.By.partialLinkText('AUTOMATION_TESTING')).click()
 $browser.findElement($driver.By.id('controlpanel.users.and.groups_groupExpanderLink')).click()
 $browser.findElement($driver.By.id('menuPuller')).click()
 
-
-$browser.findElement($driver.By.id('controlpanel.users.and.groups_groupExpanderLink')).click()
-
-$browser.findElement($driver.By.xpath(framework_config.USERS_LINK)).click()
+$browser.findElement($driver.By.xpath('//*[@id="controlpanel.users.and.groups_groupContents"]/li[3]/a')).click()
 //enroll
 $browser.findElement($driver.By.css('#nav > li > a')).click()
 $browser.findElement($driver.By.id('userName')).send_keys('100000009')
