@@ -59,8 +59,23 @@ $browser.findElement($driver.By.id('userName')).sendKeys('studenta');
 $browser.wait($driver.until.elementLocated($driver.By.name('bottom_Submit')), 5000);
 $browser.findElement($driver.By.name('bottom_Submit')).click();
     // driver.implicitly_wait(2)
-    // try:
-    //     status = driver.find_element_by_id('goodMsg1').text.split(':', 1)[0]
+try {
+  $browser.wait($driver.until.elementLocated($driver.By.id('goodMsg1')), 5000).then(function(webElement) {
+    console.log('Success');
+  });
+}
+catch(err){
+  console.log('NO Success');
+}
+
+try {
+  $browser.wait($driver.until.elementLocated($driver.By.id('badMsg1')), 5000).then(function(webElement) {
+    console.log('Failure');
+  });
+}
+catch(err){
+  console.log('NO Failure');
+}
     //     error = ''
     // except NoSuchElementException:
     //     pass
